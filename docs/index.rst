@@ -1,5 +1,5 @@
 LFSpy
-=================================
+=====
 
 Localized feature selection (LFS) is a supervised machine learning approach for embedding localized feature selection in classification. The sample space is partitioned into overlapping regions, and subsets of features are selected that are optimal for classification within each local region. As the size and membership of the feature subsets can vary across regions, LFS is able to adapt to local variation across the entire sample space.
 
@@ -11,22 +11,22 @@ The LFS approach was developed by Nargus Armanfard. For further information plea
 * N. Armanfard, JP. Reilly, and M. Komeili, "Logistic Localized Modeling of the Sample Space for Feature Selection and Classification", IEEE Transactions on Neural Networks and Learning Systems, vol. 29, no. 5, pp. 1396-1413, 2018
 
 Statement of Need
----------------------------------
+-----------------
 
-LFSpy offers an implementation of the Local Feature Selection (LFS) algorithm that is compatible with scikit-learn, one of the most widely used machine learning packages today. LFS combines classification with feature selection, and distinguishes itself by it flexibility in selecting a different subset of features for different data points based on what is most discriminative in local regions of the feature space. This means LFS overcomes a well-known weakness of many classification algorithms, i.e., classification for non-stationary data where the number of features is high relative to the number of samples. 
+LFSpy offers an implementation of the Local Feature Selection (LFS) algorithm that is compatible with scikit-learn, one of the most widely used machine learning packages today. LFS combines classification with feature selection, and distinguishes itself by its flexibility in selecting a different subset of features for different data points based on what is most discriminative in local regions of the feature space. This means LFS overcomes a well-known weakness of many classification algorithms, i.e., classification for non-stationary data where the number of features is high relative to the number of samples. 
 
 Installation
 ---------------------------------
 
 LFSpy is available on the pypy distribution platform at https://pypi.org/project/LFSpy/.
 
-To install LFSpy along with its dependacies run the command:::
+To install LFSpy along with its dependacies run the command::
 
     pip install lfspy
 
 
 Dependancies
----------------------------------
+------------
 
 
 LFS requires:
@@ -38,12 +38,13 @@ LFS requires:
 * pytest>=5.0.0
 
 Testing
----------------------------------
-
+-------
 
 We recommend running the provided test after installing LFSpy to ensure the results obtained match expected outputs.
 
-pytest may be installed either directly through pip (pip install pytest) or using the test extra (pip install LFSpy[test]).::
+pytest may be installed either directly through pip (``pip install pytest``) or using the test extra (``pip install LFSpy[test]``).
+
+::
 
     pytest --pyargs LFSpy
 
@@ -52,8 +53,7 @@ This will output to console whether or not the results of LFSpy on two datasets 
 So far, LFSpy has been tested on Windows 10 with and without Conda, and on Ubuntu. In all cases, results have been exactly the expected results.
 
 Usage
----------------------------------
-
+-----
 
 To use LFSpy on its own::
 
@@ -76,7 +76,7 @@ To use LFSpy as part of an sklearn pipeline::
     total_error, class_error = pipeline.score(testing_data, testing_labels)
 
 Tunable Parameters
----------------------------------
+------------------
 
 * alpha: (default: 19) the maximum number of selected features for each representative point
 * gamma: (default: 0.2) impurity level tolerance, controls proportion of out-of-class samples can be in local region
@@ -87,8 +87,7 @@ Tunable Parameters
 * knn: (default: 1) number of nearest neighbours to compare for classification
 
 Authors
----------------------------------
-
+-------
 
 * Oliver Cook
 * Kiret Dhindsa
@@ -97,8 +96,7 @@ Authors
 * Thomas Mudway
 
 Acknowledgments
----------------------------------
-
+---------------
 
 * N. Armanfard, JP. Reilly, and M. Komeili, "Local Feature Selection for Data Classification", IEEE Trans. on Pattern Analysis and Machine Intelligence, vol. 38, no. 6, pp. 1217-1227, 2016.
 * N. Armanfard, JP. Reilly, and M. Komeili, "Logistic Localized Modeling of the Sample Space for Feature Selection and Classification", IEEE Transactions on Neural Networks and Learning Systems, vol. 29, no. 5, pp. 1396-1413, 2018.
@@ -121,8 +119,7 @@ Acknowledgments
 
 
 Indices and tables
----------------------------------
-
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
